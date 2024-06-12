@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "znchat"
+version = "0.1.0"
+description = ""
+authors = ["Fabian Zills <fzills@icp.uni-stuttgart.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^3.0.3"
+Flask-SocketIO = "^5.3.6"
+redis = "^5.0.5"
+celery = "^5.4.0"
+eventlet = "^0.36.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.8"
+requests = "^2.32.3"
+websocket-client = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.lint.ruff]
+line-length = 90
+
+select = ["I", "F", "TID252"]
